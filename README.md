@@ -1,6 +1,6 @@
 # NPCDeath
 A death animation in NPC Servers
-![alt tag](http://i.imgur.com/PypKcDt.png)
+![alt tag](7CD175BB-A2D9-4250-B1D0-9D2448FC8440.png)
 Orginal look of plugin
 
 ## Note
