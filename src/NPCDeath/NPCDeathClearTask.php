@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace DeathNPC;
+namespace NPCDeath;
 
 use pocketmine\entity\Entity;
 use pocketmine\Player;
