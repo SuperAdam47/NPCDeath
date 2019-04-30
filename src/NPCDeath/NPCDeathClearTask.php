@@ -8,7 +8,7 @@ use pocketmine\entity\Entity;
 use pocketmine\Player;
 use pocketmine\scheduler\PluginTask;
 
-class DeathNPCClearTask extends PluginTask{
+class NPCDeathClearTask extends PluginTask{
 
     /** @var Entity $entity */
     private $entity;
