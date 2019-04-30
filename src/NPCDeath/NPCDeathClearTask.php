@@ -22,7 +22,7 @@ class NPCDeathClearTask extends PluginTask{
     }
     
     public function onRun(int $tick) : void{
-        if($this->entity instanceof DeathNPCEntity){
+        if($this->entity instanceof NPCDeathEntity){
             if($this->entity->getNameTag() === "RIP " . $this->player->getName() . " died here") $this->entity->close();
         }
     }
