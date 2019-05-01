@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace NPCDeath;
+namespace NPCDeath\xXCreditIsGoodXx;
 
 use pocketmine\entity\Human;
+
 class NPCDeathEntity extends Human{
 }
