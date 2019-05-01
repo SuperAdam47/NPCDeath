@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace NPCDeath\XxCreditIsGood;
+namespace NPCDeath\XxCreditIsGoodXx;
 
 use pocketmine\nbt\tag\{
 
