@@ -3,3 +3,4 @@ version: 1.0.1
 api: 3.0.0
 main: NPCDeath\XxCreditIsGoodXx\Main
 author: XxCreditIsGoodXx
+description: a plugin which npc are lied in floor when dead
