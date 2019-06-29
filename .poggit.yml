@@ -1,8 +1,0 @@
---- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/XxCreditIsGoodXx/NPCDeath
-branches:
-- master
-projects:
-  NPCDeath:
-    path: ""
-    icon: 1037BCF7-442F-4EFC-BFD5-0E275B869334.png
-...
