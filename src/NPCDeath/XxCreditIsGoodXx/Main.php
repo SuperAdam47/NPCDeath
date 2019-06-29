@@ -51,7 +51,7 @@ class Main extends PluginBase implements Listener{
         $npc->setNameTag("RIP " . $player->getName() . " died here");
         $npc->setNameTagAlwaysVisible(false);
         $npc->spawnToAll();
-        $this->getScheduler()->scheduleDelayedTask(new DeathNPCClearTask($this, $npc, $player), 3600);
+        $this->getScheduler()->scheduleDelayedTask(new NPCDeathClearTask($this, $npc, $player), 3600);
     }
     /**
      * @param EntityDamageEvent $event
