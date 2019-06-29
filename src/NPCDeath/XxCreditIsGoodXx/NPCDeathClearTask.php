@@ -6,9 +6,9 @@ namespace NPCDeath\XxCreditIsGoodXx;
 
 use pocketmine\entity\Entity;
 use pocketmine\Player;
-use pocketmine\scheduler\PluginTask;
+use pocketmine\scheduler\Task;
 
-class NPCDeathClearTask extends PluginTask{
+class NPCDeathClearTask extends Task{
 
     /** @var Entity $entity */
     private $entity;
@@ -18,7 +18,6 @@ class NPCDeathClearTask extends PluginTask{
     public function __construct(Main $main, Entity $entity, Player $player){
         $this->entity = $entity;
         $this->player = $player;
-        parent::__construct($main);
     }
     
     public function onRun(int $tick) : void{
