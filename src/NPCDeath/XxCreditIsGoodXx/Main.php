@@ -18,7 +18,7 @@ use pocketmine\math\Vector3;
 class Main extends PluginBase implements Listener{
 
     public function onEnable() : void{
-        Entity::registerEntity(DeathNPCEntity::class, true);
+        Entity::registerEntity(NPCDeathEntity::class, true);
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
     }
     /**
@@ -45,9 +45,9 @@ class Main extends PluginBase implements Listener{
             ])
         ]);
         $nbt->setTag($player->namedtag->getTag("Skin"));
-        $npc = new DeathNPCEntity($player->getLevel(), $nbt);
-        $npc->getDataPropertyManager()->setBlockPos(DeathNPCEntity::DATA_PLAYER_BED_POSITION, new Vector3($player->getX(), $player->getY(), $player->getZ()));
-        $npc->setPlayerFlag(DeathNPCEntity::DATA_PLAYER_FLAG_SLEEP, true);
+        $npc = new NPCDeathEntity($player->getLevel(), $nbt);
+        $npc->getDataPropertyManager()->setBlockPos(NPCDeathEntity::DATA_PLAYER_BED_POSITION, new Vector3($player->getX(), $player->getY(), $player->getZ()));
+        $npc->setPlayerFlag(NPCDeathEntity::DATA_PLAYER_FLAG_SLEEP, true);
         $npc->setNameTag("RIP " . $player->getName() . " died here");
         $npc->setNameTagAlwaysVisible(false);
         $npc->spawnToAll();
@@ -59,6 +59,6 @@ class Main extends PluginBase implements Listener{
      */
     public function onDamage(EntityDamageEvent $event) : void{
         $entity = $event->getEntity();
-        if($entity instanceof DeathNPCEntity) $event->setCancelled(true);
+        if($entity instanceof NPCDeathEntity) $event->setCancelled(true);
     }
 }
