@@ -48,10 +48,10 @@ class Main extends PluginBase implements Listener{
         $npc = new NPCDeathEntity($player->getLevel(), $nbt);
         $npc->getDataPropertyManager()->setBlockPos(NPCDeathEntity::DATA_PLAYER_BED_POSITION, new Vector3($player->getX(), $player->getY(), $player->getZ()));
         $npc->setPlayerFlag(NPCDeathEntity::DATA_PLAYER_FLAG_SLEEP, true);
-        $npc->setNameTag("RIP " . $player->getName() . " died here");
-        $npc->setNameTagAlwaysVisible(false);
+        $npc->setNameTag($player->getName());
+        $npc->setNameTagAlwaysVisible(true);
         $npc->spawnToAll();
-        $this->getScheduler()->scheduleDelayedTask(new NPCDeathClearTask($this, $npc, $player), 3600);
+        $this->getScheduler()->scheduleDelayedTask(new NPCDeathClearTask($this, $npc, $player), 300);
     }
     /**
      * @param EntityDamageEvent $event
