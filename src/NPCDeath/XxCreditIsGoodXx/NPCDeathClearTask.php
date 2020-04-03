@@ -22,7 +22,7 @@ class NPCDeathClearTask extends Task{
     
     public function onRun(int $tick) : void{
         if($this->entity instanceof NPCDeathEntity){
-            if($this->entity->getNameTag() === "RIP " . $this->player->getName() . " died here") $this->entity->close();
+            if($this->entity->getNameTag() === $this->player->getName()) $this->entity->close();
         }
     }
 }
